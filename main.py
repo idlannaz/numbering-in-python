@@ -1,42 +1,44 @@
-# 1. Checks whether the number is even or odd.
+############################################################################
+# Take input from the user
 number = int(input("Enter a number: "))
-print(number)
+
+# Check if the number is even or odd
 if number % 2 == 0:
-        print("The number is even.")
+    print("The number", number, "is even.")
 else:
-    print("The number is odd.")
+    print("The number", number, "is odd.")
 
-# 2. Generate a multiplication table for the number
-print(f"Multiplication table for {number}:\n")
-for multiplyby in range(1, 11):
-    equal = number * multiplyby
-    print(f"{number} x {multiplyby} = {equal}")
+############################################################################
+# Generate the multiplication table
+print("Multiplication Table of", number)
+for i in range(1, 11):
+    print(number, "x", i, "=", number * i)
 
-# 3. Checking the largest number
-numberOne = int(input("Enter a number: "))
-numberTwo = int(input("Enter a number: "))
-numberThree = int(input("Enter a number: "))
+############################################################################
+# Take input from the user
+number1 = int(input("Enter the first number: "))
+number2 = int(input("Enter the second number: "))
+number3 = int(input("Enter the third number: "))
 
-if numberOne >= numberTwo and numberOne >= numberThree:
-    largest = numberOne
-elif numberTwo >= numberOne and numberTwo >= numberThree:
-    largest = numberTwo
-else:
-    largest = numberThree
+# Find the largest number
+largest_number = max(number1, number2, number3)
 
-print(f"The largest number is: {largest}")
+# Print the result
+print("The largest number is", largest_number)
 
-# 4. Count all vowels from a string
-input_string = input("Enter any word: ")
 
+############################################################################
+# Take input from the user
+string = input("Enter a string: ")
+
+# Initialize a counter for vowels
 vowel_count = 0
 
-input_string = input_string.lower()
-
-vowels = "aeiou"
-
-for char in input_string:
-    if char in vowels:
+# Iterate through each character in the string
+for char in string:
+    # Check if the character is a vowel
+    if char.lower() in ['a', 'e', 'i', 'o', 'u']:
         vowel_count += 1
 
-print(f"The number of vowels in the string is: {vowel_count}")
+# Print the result
+print("The number of vowels in", string, "is", vowel_count)
